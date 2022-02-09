@@ -1,0 +1,155 @@
+#container{
+    background-color:rgb(66, 62, 62);
+    font-size:1.6rem;
+    width:100%;
+    max-width:400px;
+    height:80vh;
+
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    padding:30px;
+    gap:10px;
+
+    grid-template-areas:
+        "resultado resultado resultado resultado"
+        "limpar porcentagem dividir multiplicar"
+        "sete oito nove subtrair"
+        "quatro cinco seis somar"
+        "um dois tres calcular"
+        "zero virgula apagar calcular"
+    ;
+
+
+
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.grid-item{
+    background-color:rgba(22, 22, 22, 0.623);
+    border-radius:7px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:2.0rem;
+    cursor:pointer;
+}
+
+.div-resultado{
+    grid-area:resultado;
+    background-color:gray;
+
+    height:100px;
+    font-size:3.0rem;
+
+   
+}
+
+.resultado{
+    width:100%;
+    height:100%;
+    margin:0 8px 20px 8px;
+    overflow:auto;
+    overflow-y: hidden;
+
+    text-align:right;
+    position:relative;
+    top:10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:end;
+}
+
+.resultado::-webkit-scrollbar{
+    width:10px;
+}
+.resultado::-webkit-scrollbar-track{
+    background:gray;
+}
+.resultado::-webkit-scrollbar-thumb{
+    background-color:black;
+    border:4px solid gray;
+    border-radius:15px;
+}
+
+.limpar{
+    grid-area:limpar;
+}
+
+.porcentagem{
+    grid-area:porcentagem;
+}
+
+.dividir{
+    grid-area:dividir;
+}
+
+.multiplicar{
+    grid-area:multiplicar;
+}
+
+.sete{
+    grid-area:sete;
+}
+
+.oito{
+    grid-area:oito;
+}
+
+.nove{
+    grid-area:nove;
+}
+
+.subtrair{
+    grid-area:subtrair;
+}
+
+.quatro{
+    grid-area:quatro;
+}
+
+.cinco{
+    grid-area:cinco;
+}
+
+.seis{
+    grid-area:seis;
+}
+
+.somar{
+    grid-area:somar;
+}
+
+.tres{
+    grid-area:tres;
+}
+
+.dois{
+    grid-area:dois;
+}
+
+.um{
+    grid-area:um;
+}
+
+.calcular{
+    grid-area:calcular;
+}
+
+.zero{
+    grid-area:zero;
+}
+
+.virgula{
+    grid-area:virgula;
+}
+
+.apagar{
+    grid-area:apagar;
+}
