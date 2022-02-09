@@ -16,30 +16,38 @@
 // Um botao "C" que limpa o elemento que exibe a conta 
 
 const botoesCaracterNaTela = document.querySelectorAll('.caracterNaTela')
-
 let resultado = document.querySelector(".resultado")
-
 let equacao
+
 
 botoesCaracterNaTela.forEach(botao => {
 
     botao.addEventListener('click', event => {
         resultado.innerText += botao.innerText
-
-        
+    
 
         if(!equacao) {
             equacao = botao.dataset.value
         }else{
             equacao += botao.dataset.value
         }
-    
     })
 })
 
-const botaoCalcular = document.querySelector(".calcular")
 
+
+
+const botaoCalcular = document.querySelector(".calcular")
 botaoCalcular.addEventListener('click', event => {
 
      resultado.innerText = eval(equacao)
+})
+
+
+
+const botaoApagar1 = document.querySelector('.apagar')
+botaoApagar1.addEventListener('click', event => {
+    let novaEquacao = equacao.substring(0, equacao.length - 1)
+    equacao = novaEquacao
+    resultado.innerText = equacao
 })
